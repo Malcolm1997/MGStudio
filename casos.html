@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casos — MGStudios</title>
+  <meta name="description" content="Portfolio de proyectos de MGStudios. Sitios web, landing pages y e-commerce para marcas que valoran el detalle y la excelencia." />
+  <meta property="og:title" content="Casos — MGStudios" />
+  <meta property="og:description" content="Portfolio de proyectos de MGStudios. Sitios web, landing pages y e-commerce para marcas que valoran el detalle y la excelencia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mgstudio.com.ar/casos.html" />
+  <meta property="og:image" content="https://mgstudio.com.ar/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Casos de MGStudios — Portfolio de desarrollo web" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="MGStudios" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Casos — MGStudios" />
+  <meta name="twitter:description" content="Portfolio de proyectos web de MGStudios. Diseño editorial y código limpio para marcas reales." />
+  <meta name="twitter:image" content="https://mgstudio.com.ar/og-image.jpg" />
+  <meta name="theme-color" content="#F5F1E8" />
+  <link rel="canonical" href="https://mgstudio.com.ar/casos.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#F5F1E8',
+            'paper-2': '#ECE6D5',
+            'ink': '#1A1A1A',
+            'ink-soft': '#3D3A33',
+            'ink-muted': '#8A8270',
+            'accent': '#2E6347',
+            'accent-deep': '#1F4A33',
+            'gold': '#B89968',
+            'line': '#DCD2C0',
+            'on-surface-variant': '#404943',
+            'surface-container-low': '#f3f4f0',
+            'primary-fixed': '#b6efcb',
+          },
+          spacing: {
+            'margin-desktop': '80px',
+            'margin-mobile': '20px',
+            'section-v': '96px',
+            'gutter': '24px',
+          },
+          borderRadius: {
+            'DEFAULT': '0.5rem',
+            'lg': '0.75rem',
+            'xl': '1rem',
+            'full': '9999px',
+          },
+          fontSize: {
+            'label': ['12px', { lineHeight: '1', letterSpacing: '0.12em', fontWeight: '600' }],
+            'h3': ['22px', { lineHeight: '1.4', letterSpacing: '-0.01em', fontWeight: '600' }],
+            'body': ['16px', { lineHeight: '1.6', letterSpacing: '0', fontWeight: '400' }],
+            'hero': ['72px', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '700' }],
+            'hero-sm': ['44px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec': ['56px', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec-sm': ['36px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'h2': ['36px', { lineHeight: '1.3', letterSpacing: '-0.015em', fontWeight: '700' }],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-paper text-ink font-sans">
+
+  <!-- NAV -->
+  <nav class="site-nav fixed top-0 w-full z-50 bg-paper/90 backdrop-blur-md border-b border-line" aria-label="Navegación principal">
+    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <a href="index.html" class="text-accent-deep font-bold text-2xl tracking-tight" style="letter-spacing:-0.02em;">MGStudios</a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"     class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Inicio</a>
+        <a href="servicios.html" class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Servicios</a>
+        <a href="casos.html"     class="nav-link active text-body text-accent-deep">Casos</a>
+        <a href="contacto.html"  class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Contacto</a>
+      </div>
+
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary">Empecemos</a>
+
+      <button class="hamburger md:hidden" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="casos.html">Casos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="mobile-cta">Empecemos</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <header class="pt-40 pb-16 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <div class="max-w-3xl">
+        <span class="pill-tag mb-6 inline-block reveal">Portfolio</span>
+        <h1 class="text-hero-sm md:text-hero mb-8 reveal reveal-delay-1">
+          El portfolio<br/>
+          <em class="fraunces-italic text-accent-deep not-italic">está en camino</em>.
+        </h1>
+        <p class="text-body text-ink-soft text-lg max-w-xl reveal reveal-delay-2" style="line-height:1.7;">
+          Somos un estudio nuevo y cada proyecto que tomamos recibe toda nuestra atención.
+          Acá vas a ver el resultado cuando esté listo.
+        </p>
+      </div>
+    </header>
+
+    <!-- ESTADO PRINCIPAL: SIN PROYECTOS -->
+    <section class="pb-section-v px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+        <!-- Panel principal -->
+        <div class="bg-paper-2 rounded-xl border border-line p-10 md:p-14 reveal">
+          <div class="w-14 h-14 bg-accent-deep/10 rounded-xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-accent-deep" style="font-size:28px;">photo_library</span>
+          </div>
+          <h2 class="text-h2 mb-5" style="font-size:clamp(22px,3vw,32px);">Primeros proyectos en producción</h2>
+          <p class="text-body text-ink-muted mb-8" style="line-height:1.7;">
+            Estamos trabajando en nuestros primeros lanzamientos y los documentamos con el mismo cuidado que ponemos en el código.
+            Cuando estén listos, los encontrás acá.
+          </p>
+          <div class="border-t border-line pt-8 space-y-3">
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              Sitios web estáticos de alta performance
+            </div>
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              Landing pages orientadas a conversión
+            </div>
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              E-commerce boutique con diseño editorial
+            </div>
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              Brand sites para profesionales y estudios
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel CTA -->
+        <div class="space-y-6 reveal reveal-delay-1">
+          <div class="bg-accent-deep text-paper rounded-xl p-10 md:p-12">
+            <span class="text-label text-gold uppercase tracking-widest block mb-5">Apertura de agenda</span>
+            <h3 class="mb-5" style="font-size:clamp(20px,2.5vw,28px);font-weight:700;line-height:1.25;letter-spacing:-0.01em;">
+              Tu proyecto puede ser el primero en este portfolio.
+            </h3>
+            <p class="text-body text-paper/70 mb-8" style="line-height:1.65;">
+              Los primeros clientes tienen precio especial y atención directa. Sin intermediarios, sin listas de espera.
+            </p>
+            <a href="contacto.html" class="inline-flex items-center gap-2 bg-paper text-accent-deep font-bold text-label tracking-widest uppercase px-8 py-4 rounded-full hover:bg-paper/90 transition-colors duration-200">
+              Hablemos <span style="color:#B89968;">→</span>
+            </a>
+          </div>
+
+          <div class="bg-paper-2 rounded-xl border border-line p-8">
+            <p class="text-body text-ink-muted italic" style="line-height:1.7;">
+              "No mostramos proyectos inventados. Cuando tengamos casos reales para mostrar, los vas a ver acá — con contexto, resultados y honestidad."
+            </p>
+            <p class="text-label text-ink-muted uppercase tracking-widest mt-4">— MGStudios</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-accent-deep text-paper py-section-v border-t border-gold/20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <div class="md:col-span-5">
+        <a href="index.html" class="text-2xl font-bold text-paper tracking-tight block mb-5" style="letter-spacing:-0.02em;">MGStudios</a>
+        <p class="text-body text-paper/75 max-w-xs" style="line-height:1.65;">
+          Especialistas en la creación de experiencias digitales que trascienden el tiempo.
+        </p>
+      </div>
+      <div class="md:col-span-3 md:col-start-7 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Explorar</h4>
+        <a href="servicios.html" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Servicios</a>
+        <a href="casos.html"     class="text-body text-paper underline decoration-gold">Casos</a>
+        <a href="contacto.html"  class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Contacto</a>
+      </div>
+      <div class="md:col-span-2 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Social</h4>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Instagram</a>
+        <a href="https://linkedin.com"  target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">LinkedIn</a>
+      </div>
+      <div class="md:col-span-12 pt-8 mt-4 border-t border-paper/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-label text-paper/50">© 2025 MGStudios. Hecho con oficio desde Rosario para el mundo.</p>
+        <a href="cookies.html" class="text-label text-paper/50 hover:text-paper/80 transition-colors duration-200">Política de cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" role="dialog" aria-label="Preferencias de cookies">
+    <p>Usamos cookies para mejorar tu experiencia. <a href="cookies.html">Más info</a></p>
+    <button id="cookie-accept">Aceptar</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

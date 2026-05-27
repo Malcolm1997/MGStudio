@@ -1,0 +1,9 @@
+# MGStudios — robots.txt
+# https://mgstudio.com.ar
+
+User-agent: *
+Allow: /
+Disallow: /cookies.html
+
+# Sitemap
+Sitemap: https://mgstudio.com.ar/sitemap.xml
