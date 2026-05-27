@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="MGStudios logo">
+  <title>MGStudios</title>
+  <!-- Fondo verde botella -->
+  <rect width="200" height="200" rx="18" ry="18" fill="#1F4A33"/>
+  <!-- MG en serif itálica cremosa -->
+  <text
+    x="100"
+    y="122"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic"
+    font-weight="700"
+    font-size="92"
+    fill="#F5F1E8"
+    text-anchor="middle"
+    dominant-baseline="auto"
+  >MG</text>
+  <!-- Studios en sans-serif dorado -->
+  <text
+    x="100"
+    y="163"
+    font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+    font-weight="400"
+    font-size="25"
+    fill="#B89968"
+    text-anchor="middle"
+    letter-spacing="2"
+  >Studios</text>
+</svg>
