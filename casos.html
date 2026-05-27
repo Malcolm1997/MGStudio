@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casos — MGStudio</title>
+  <meta name="description" content="Portfolio de proyectos de MGStudio. Sitios web, landing pages y e-commerce para marcas que valoran el detalle y la excelencia." />
+  <meta property="og:title" content="Casos — MGStudio" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#F5F1E8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#F5F1E8',
+            'paper-2': '#ECE6D5',
+            'ink': '#1A1A1A',
+            'ink-soft': '#3D3A33',
+            'ink-muted': '#8A8270',
+            'accent': '#2E6347',
+            'accent-deep': '#1F4A33',
+            'gold': '#B89968',
+            'line': '#DCD2C0',
+            'on-surface-variant': '#404943',
+            'surface-container-low': '#f3f4f0',
+            'primary-fixed': '#b6efcb',
+          },
+          spacing: {
+            'margin-desktop': '80px',
+            'margin-mobile': '20px',
+            'section-v': '96px',
+            'gutter': '24px',
+          },
+          borderRadius: {
+            'DEFAULT': '0.5rem',
+            'lg': '0.75rem',
+            'xl': '1rem',
+            'full': '9999px',
+          },
+          fontSize: {
+            'label': ['12px', { lineHeight: '1', letterSpacing: '0.12em', fontWeight: '600' }],
+            'h3': ['22px', { lineHeight: '1.4', letterSpacing: '-0.01em', fontWeight: '600' }],
+            'body': ['16px', { lineHeight: '1.6', letterSpacing: '0', fontWeight: '400' }],
+            'hero': ['72px', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '700' }],
+            'hero-sm': ['44px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec': ['56px', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec-sm': ['36px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'h2': ['36px', { lineHeight: '1.3', letterSpacing: '-0.015em', fontWeight: '700' }],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-paper text-ink font-sans">
+
+  <!-- NAV -->
+  <nav class="site-nav fixed top-0 w-full z-50 bg-paper/90 backdrop-blur-md border-b border-line" aria-label="Navegación principal">
+    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <a href="index.html" class="text-accent-deep font-bold text-2xl tracking-tight" style="letter-spacing:-0.02em;">MGStudio</a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"     class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Inicio</a>
+        <a href="servicios.html" class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Servicios</a>
+        <a href="casos.html"     class="nav-link active text-body text-accent-deep">Casos</a>
+        <a href="contacto.html"  class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Contacto</a>
+      </div>
+
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary">Empecemos</a>
+
+      <button class="hamburger md:hidden" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="casos.html">Casos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="mobile-cta">Empecemos</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <header class="pt-40 pb-16 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <div class="max-w-3xl">
+        <span class="pill-tag mb-6 inline-block reveal">Nuestro portfolio</span>
+        <h1 class="text-hero-sm md:text-hero mb-8 reveal reveal-delay-1">
+          Nuestros trabajos más<br/>
+          <em class="fraunces-italic text-accent-deep not-italic">recientes</em>.
+        </h1>
+        <p class="text-body text-ink-soft text-lg max-w-xl reveal reveal-delay-2" style="line-height:1.7;">
+          Creación de identidades digitales y plataformas de alta costura para marcas que valoran el detalle y la excelencia.
+        </p>
+      </div>
+    </header>
+
+    <!-- FILTROS -->
+    <div class="px-margin-mobile md:px-margin-desktop pb-12 max-w-[1200px] mx-auto reveal">
+      <div class="flex flex-wrap gap-3 border-b border-line pb-6">
+        <button class="filter-btn active text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="all">
+          Todos
+        </button>
+        <button class="filter-btn text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="ecommerce">
+          E-Commerce
+        </button>
+        <button class="filter-btn text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="brand">
+          Brand Site
+        </button>
+        <button class="filter-btn text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="landing">
+          Landing
+        </button>
+      </div>
+    </div>
+
+    <!-- GRID DE PROYECTOS + COMING SOON -->
+    <section class="pb-section-v px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+
+      <!-- Proyectos existentes -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 mb-16">
+
+        <!-- Proyecto 1 -->
+        <article class="project-card group reveal reveal-delay-1" data-category="ecommerce">
+          <div class="overflow-hidden rounded-lg mb-7 bg-paper-2" style="aspect-ratio:4/5;">
+            <img
+              src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
+              alt="E-commerce para Vivero Boutique El Pinar — Rosario"
+              class="project-image w-full h-full object-cover"
+              loading="lazy"
+              width="800" height="1000"
+            />
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-label text-gold uppercase tracking-widest">E-Commerce</span>
+            <div class="h-[1px] flex-1 bg-line"></div>
+          </div>
+          <h2 class="mb-3 group-hover:text-accent-deep transition-colors duration-250" style="font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-0.01em;">
+            Vivero Boutique "El Pinar"
+          </h2>
+          <p class="text-body text-ink-muted max-w-sm mb-5">Reinvención total de su canal de ventas online, logrando un aumento del 40% en pedidos mensuales.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill-tag">Diseño</span>
+            <span class="pill-tag">E-commerce</span>
+            <span class="pill-tag">SEO</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 — offset visual en desktop -->
+        <article class="project-card group md:mt-20 reveal reveal-delay-2" data-category="brand">
+          <div class="overflow-hidden rounded-lg mb-7 bg-paper-2" style="aspect-ratio:4/5;">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+              alt="Brand site para Estudio de Arquitectura Silva"
+              class="project-image w-full h-full object-cover"
+              loading="lazy"
+              width="800" height="1000"
+            />
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-label text-gold uppercase tracking-widest">Brand Site</span>
+            <div class="h-[1px] flex-1 bg-line"></div>
+          </div>
+          <h2 class="mb-3 group-hover:text-accent-deep transition-colors duration-250" style="font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-0.01em;">
+            Estudio Arq. Silva
+          </h2>
+          <p class="text-body text-ink-muted max-w-sm mb-5">Un portfolio digital que se siente como una revista de arquitectura de colección. Minimalismo puro.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill-tag">Diseño editorial</span>
+            <span class="pill-tag">Portfolio</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="project-card group reveal reveal-delay-1" data-category="landing">
+          <div class="overflow-hidden rounded-lg mb-7 bg-paper-2" style="aspect-ratio:4/5;">
+            <img
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
+              alt="Landing page para consultoría de RRHH — Laura Morales"
+              class="project-image w-full h-full object-cover"
+              loading="lazy"
+              width="800" height="1000"
+            />
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-label text-gold uppercase tracking-widest">Landing</span>
+            <div class="h-[1px] flex-1 bg-line"></div>
+          </div>
+          <h2 class="mb-3 group-hover:text-accent-deep transition-colors duration-250" style="font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-0.01em;">
+            Consultoría LM
+          </h2>
+          <p class="text-body text-ink-muted max-w-sm mb-5">Landing de captación para una consultora de RRHH que duplicó sus leads en el primer mes de lanzamiento.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill-tag">Landing</span>
+            <span class="pill-tag">Conversión</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Coming soon card -->
+      <div class="flex flex-col items-center text-center py-20 bg-paper-2 rounded-xl border border-line reveal">
+        <div class="max-w-lg px-6">
+          <div class="w-14 h-14 bg-accent-deep/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-accent-deep" style="font-size:28px;">construction</span>
+          </div>
+          <h3 class="text-h3 mb-4">Más casos en camino</h3>
+          <p class="text-body text-ink-muted mb-8" style="line-height:1.7;">
+            Estamos documentando cuidadosamente nuestros lanzamientos más recientes para compartirlos con el mundo.
+            Nuestra pasión por el detalle lleva tiempo.
+          </p>
+          <div class="bg-paper rounded-lg border border-line p-6">
+            <p class="text-body text-accent-deep font-semibold mb-1">¡Estamos tomando nuevos proyectos!</p>
+            <p class="text-body text-ink-muted mb-6">Trabajamos con marcas <strong class="text-ink">locales y globales</strong>.</p>
+            <a href="contacto.html" class="btn-primary">Hablemos de tu proyecto</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-accent-deep text-paper py-section-v border-t border-gold/20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <div class="md:col-span-5">
+        <a href="index.html" class="text-2xl font-bold text-paper tracking-tight block mb-5" style="letter-spacing:-0.02em;">MGStudio</a>
+        <p class="text-body text-paper/75 max-w-xs" style="line-height:1.65;">
+          Especialistas en la creación de experiencias digitales que trascienden el tiempo.
+        </p>
+      </div>
+      <div class="md:col-span-3 md:col-start-7 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Explorar</h4>
+        <a href="servicios.html" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Servicios</a>
+        <a href="casos.html"     class="text-body text-paper underline decoration-gold">Casos</a>
+        <a href="contacto.html"  class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Contacto</a>
+      </div>
+      <div class="md:col-span-2 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Social</h4>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Instagram</a>
+        <a href="https://linkedin.com"  target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">LinkedIn</a>
+      </div>
+      <div class="md:col-span-12 pt-8 mt-4 border-t border-paper/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-label text-paper/50">© 2025 MGStudio. Hecho con oficio desde Rosario para el mundo.</p>
+        <a href="cookies.html" class="text-label text-paper/50 hover:text-paper/80 transition-colors duration-200">Política de cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" role="dialog" aria-label="Preferencias de cookies">
+    <p>Usamos cookies para mejorar tu experiencia. <a href="cookies.html">Más info</a></p>
+    <button id="cookie-accept">Aceptar</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+
+  <script>
+    // Inicializar filtros con estilo de underline activo
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('active', 'text-accent-deep', 'font-bold', 'border-accent-deep');
+          b.classList.add('text-ink-soft');
+        });
+        btn.classList.add('active', 'text-accent-deep', 'font-bold', 'border-accent-deep');
+        btn.classList.remove('text-ink-soft');
+      });
+    });
+
+    // Estado inicial del filtro activo
+    document.querySelector('.filter-btn.active')?.classList.add('text-accent-deep', 'font-bold', 'border-accent-deep');
+    document.querySelector('.filter-btn.active')?.classList.remove('text-ink-soft');
+  </script>
+</body>
+</html>

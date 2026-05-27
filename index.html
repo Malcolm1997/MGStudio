@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MGStudio — Desarrollo web boutique desde Rosario</title>
+  <meta name="description" content="Estudio de desarrollo web boutique. Hacemos sitios estáticos de alta calidad para negocios reales. Diseño editorial, código limpio, entrega rápida." />
+  <meta property="og:title" content="MGStudio — Desarrollo web boutique" />
+  <meta property="og:description" content="Hacemos webs que venden mientras dormís. Desarrollo boutique para negocios que buscan calidad, no plantillas." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#F5F1E8" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#F5F1E8',
+            'paper-2': '#ECE6D5',
+            'ink': '#1A1A1A',
+            'ink-soft': '#3D3A33',
+            'ink-muted': '#8A8270',
+            'accent': '#2E6347',
+            'accent-deep': '#1F4A33',
+            'gold': '#B89968',
+            'line': '#DCD2C0',
+            'on-surface-variant': '#404943',
+          },
+          spacing: {
+            'margin-desktop': '80px',
+            'margin-mobile': '20px',
+            'section-v': '96px',
+            'gutter': '24px',
+          },
+          borderRadius: {
+            'DEFAULT': '0.5rem',
+            'lg': '0.75rem',
+            'xl': '1rem',
+            'full': '9999px',
+          },
+          fontSize: {
+            'label': ['12px', { lineHeight: '1', letterSpacing: '0.12em', fontWeight: '600' }],
+            'h3': ['22px', { lineHeight: '1.4', letterSpacing: '-0.01em', fontWeight: '600' }],
+            'body': ['16px', { lineHeight: '1.6', letterSpacing: '0', fontWeight: '400' }],
+            'hero': ['72px', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '700' }],
+            'hero-sm': ['44px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec': ['56px', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec-sm': ['36px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'h2': ['36px', { lineHeight: '1.3', letterSpacing: '-0.015em', fontWeight: '700' }],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-paper text-ink font-sans">
+
+  <!-- ================================================================
+       NAVEGACIÓN
+       ================================================================ -->
+  <nav class="site-nav fixed top-0 w-full z-50 bg-paper/90 backdrop-blur-md border-b border-line" aria-label="Navegación principal">
+    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+
+      <!-- Logo -->
+      <a href="index.html" class="text-accent-deep font-bold text-2xl tracking-tight" style="letter-spacing:-0.02em;">MGStudio</a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"     class="nav-link active text-body text-accent-deep">Inicio</a>
+        <a href="servicios.html" class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Servicios</a>
+        <a href="casos.html"     class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Casos</a>
+        <a href="contacto.html"  class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Contacto</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary">Empecemos</a>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="casos.html">Casos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="mobile-cta">Empecemos</a>
+  </div>
+
+  <main>
+
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+    <section class="min-h-[90vh] flex flex-col justify-center px-margin-mobile md:px-margin-desktop pt-32 pb-24 max-w-[1200px] mx-auto">
+      <div class="max-w-4xl">
+
+        <span class="pill-tag mb-8 inline-block reveal">Desarrollo web boutique · Rosario, Argentina</span>
+
+        <h1 class="text-hero-sm md:text-hero mb-8 reveal reveal-delay-1">
+          Hacemos webs que venden<br/>
+          <em class="fraunces-italic text-accent-deep not-italic">mientras dormís</em>.
+        </h1>
+
+        <p class="text-body text-ink-soft max-w-xl mb-12 text-lg reveal reveal-delay-2" style="line-height:1.65;">
+          Desarrollo web boutique para negocios que buscan calidad, no plantillas.
+          Directo, sin vueltas y con oficio.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-5 reveal reveal-delay-3">
+          <a href="contacto.html" class="btn-primary">Empecemos</a>
+          <a href="servicios.html" class="btn-ghost">
+            Ver servicios <span class="arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50">
+        <span class="text-label text-ink-muted">scroll</span>
+        <div class="w-[1px] h-8 bg-gold/60"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         PARA QUIÉN
+         ================================================================ -->
+    <section class="bg-paper-2 px-margin-mobile md:px-margin-desktop py-section-v">
+      <div class="max-w-[1200px] mx-auto">
+
+        <div class="mb-14 reveal">
+          <span class="pill-tag mb-4 inline-block">Para quién</span>
+          <h2 class="text-sec-sm md:text-sec">¿Esto es <em class="fraunces-italic text-accent-deep not-italic">para vos</em>?</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Card 1 -->
+          <div class="service-card bg-paper p-9 rounded-lg border-l-4 border-accent-deep reveal reveal-delay-1">
+            <div class="w-10 h-10 bg-accent-deep/10 rounded-lg flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-accent-deep" style="font-size:22px;">business_center</span>
+            </div>
+            <h3 class="text-h3 mb-3">Pequeñas empresas</h3>
+            <p class="text-body text-ink-muted">Digitalizamos tu operación con herramientas robustas que escalan junto a tu crecimiento real.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card bg-paper p-9 rounded-lg border-l-4 border-accent-deep reveal reveal-delay-2">
+            <div class="w-10 h-10 bg-accent-deep/10 rounded-lg flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-accent-deep" style="font-size:22px;">person_celebrate</span>
+            </div>
+            <h3 class="text-h3 mb-3">Profesionales independientes</h3>
+            <p class="text-body text-ink-muted">Tu marca personal merece una vidriera que proyecte autoridad y atraiga a tus clientes ideales.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card bg-paper p-9 rounded-lg border-l-4 border-accent-deep reveal reveal-delay-3">
+            <div class="w-10 h-10 bg-accent-deep/10 rounded-lg flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-accent-deep" style="font-size:22px;">storefront</span>
+            </div>
+            <h3 class="text-h3 mb-3">Negocios locales</h3>
+            <p class="text-body text-ink-muted">Optimizamos tu presencia para que quienes te buscan en tu zona te encuentren primero.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CÓMO TRABAJAMOS
+         ================================================================ -->
+    <section class="px-margin-mobile md:px-margin-desktop py-section-v max-w-[1200px] mx-auto">
+
+      <div class="mb-14 reveal">
+        <span class="pill-tag mb-4 inline-block">Proceso</span>
+        <h2 class="text-sec-sm md:text-sec">Cómo trabajamos</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
+
+        <!-- Step 1 -->
+        <div class="reveal reveal-delay-1">
+          <div class="text-gold font-bold mb-4" style="font-size:2.5rem;line-height:1;letter-spacing:-0.02em;">01</div>
+          <h4 class="text-h3 mb-3">Brief</h4>
+          <p class="text-body text-ink-soft">Entendemos tu negocio, tus metas y quién es tu competencia real.</p>
+          <div class="w-12 h-[2px] bg-gold/40 mt-6"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="reveal reveal-delay-2">
+          <div class="text-gold font-bold mb-4" style="font-size:2.5rem;line-height:1;letter-spacing:-0.02em;">02</div>
+          <h4 class="text-h3 mb-3">Diseño</h4>
+          <p class="text-body text-ink-soft">Bocetamos una experiencia editorial única, centrada en la conversión.</p>
+          <div class="w-12 h-[2px] bg-gold/40 mt-6"></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="reveal reveal-delay-3">
+          <div class="text-gold font-bold mb-4" style="font-size:2.5rem;line-height:1;letter-spacing:-0.02em;">03</div>
+          <h4 class="text-h3 mb-3">Código</h4>
+          <p class="text-body text-ink-soft">Programamos con precisión artesanal, priorizando velocidad y SEO.</p>
+          <div class="w-12 h-[2px] bg-gold/40 mt-6"></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="reveal reveal-delay-4">
+          <div class="text-gold font-bold mb-4" style="font-size:2.5rem;line-height:1;letter-spacing:-0.02em;">04</div>
+          <h4 class="text-h3 mb-3">Entrega</h4>
+          <p class="text-body text-ink-soft">Lanzamos tu sitio y te capacitamos para que tengas el control total.</p>
+          <div class="w-12 h-[2px] bg-gold/40 mt-6"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CASOS DESTACADOS (sección oscura)
+         ================================================================ -->
+    <section class="bg-ink text-paper px-margin-mobile md:px-margin-desktop py-section-v">
+      <div class="max-w-[1200px] mx-auto">
+
+        <div class="flex justify-between items-end mb-16 reveal">
+          <h2 class="text-sec-sm md:text-sec">Casos</h2>
+          <a href="casos.html" class="text-label text-paper/60 hover:text-paper transition-colors duration-200 tracking-widest uppercase">
+            Ver todos →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+
+          <!-- Project 1 -->
+          <article class="project-card group cursor-pointer reveal reveal-delay-1">
+            <a href="casos.html" aria-label="Ver caso: Vivero Boutique El Pinar">
+              <div class="overflow-hidden rounded-lg mb-7" style="aspect-ratio:4/5;">
+                <img
+                  src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
+                  alt="E-commerce para Vivero Boutique El Pinar — pantalla con productos naturales"
+                  class="project-image w-full h-full object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700"
+                  loading="lazy"
+                  width="800" height="1000"
+                />
+              </div>
+              <div class="flex items-center gap-4 mb-4">
+                <span class="text-label text-gold uppercase tracking-widest">E-Commerce</span>
+                <div class="h-[1px] flex-1 bg-paper/10"></div>
+              </div>
+              <h3 class="text-h2 mb-3 group-hover:text-gold transition-colors duration-300" style="font-size:28px;">Vivero Boutique "El Pinar"</h3>
+              <p class="text-body text-paper/55 max-w-sm">Reinvención total de su canal de ventas online, logrando un aumento del 40% en pedidos mensuales.</p>
+            </a>
+          </article>
+
+          <!-- Project 2 — offset visual -->
+          <article class="project-card group cursor-pointer md:mt-28 reveal reveal-delay-2">
+            <a href="casos.html" aria-label="Ver caso: Estudio Arq. Silva">
+              <div class="overflow-hidden rounded-lg mb-7" style="aspect-ratio:4/5;">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                  alt="Brand site para Estudio de Arquitectura Silva — portfolio editorial"
+                  class="project-image w-full h-full object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700"
+                  loading="lazy"
+                  width="800" height="1000"
+                />
+              </div>
+              <div class="flex items-center gap-4 mb-4">
+                <span class="text-label text-gold uppercase tracking-widest">Brand Site</span>
+                <div class="h-[1px] flex-1 bg-paper/10"></div>
+              </div>
+              <h3 class="text-h2 mb-3 group-hover:text-gold transition-colors duration-300" style="font-size:28px;">Estudio Arq. Silva</h3>
+              <p class="text-body text-paper/55 max-w-sm">Un portfolio digital que se siente como una revista de arquitectura de colección. Minimalismo puro.</p>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         TESTIMONIOS
+         ================================================================ -->
+    <section class="px-margin-mobile md:px-margin-desktop py-section-v max-w-[1200px] mx-auto">
+
+      <div class="mb-14 reveal">
+        <span class="pill-tag mb-4 inline-block">Testimonios</span>
+        <h2 class="text-sec-sm md:text-sec">Lo que dicen<br/><em class="fraunces-italic text-accent-deep not-italic">nuestros clientes</em>.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Quote 1 -->
+        <blockquote class="bg-paper-2 rounded-lg p-10 border-l-4 border-accent-deep reveal reveal-delay-1">
+          <p class="testimonial-quote text-body text-ink-soft text-lg mb-8" style="line-height:1.7;">
+            Trabajar con MGStudio fue diferente desde el primer mensaje. Entendieron mi negocio sin que yo tuviera que explicar todo dos veces. El resultado superó lo que imaginé.
+          </p>
+          <footer>
+            <strong class="text-body text-ink">— Laura M.</strong>
+            <span class="text-body text-ink-muted"> · Consultora de RRHH, Buenos Aires</span>
+          </footer>
+        </blockquote>
+
+        <!-- Quote 2 -->
+        <blockquote class="bg-paper-2 rounded-lg p-10 border-l-4 border-accent-deep md:mt-8 reveal reveal-delay-2">
+          <p class="testimonial-quote text-body text-ink-soft text-lg mb-8" style="line-height:1.7;">
+            Mi vivero pasó de no tener presencia digital a vender online en toda la región. La web carga rápido, se ve hermosa y los clientes la elogian todo el tiempo.
+          </p>
+          <footer>
+            <strong class="text-body text-ink">— Rodrigo V.</strong>
+            <span class="text-body text-ink-muted"> · Vivero El Pinar, Rosario</span>
+          </footer>
+        </blockquote>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CTA FINAL
+         ================================================================ -->
+    <section class="px-margin-mobile md:px-margin-desktop pb-section-v max-w-[1200px] mx-auto">
+      <div class="border-t border-gold/30 pt-20 text-center reveal">
+        <h2 class="text-sec-sm md:text-sec mb-6">¿Empezamos<br/><em class="fraunces-italic text-accent-deep not-italic">tu proyecto</em>?</h2>
+        <p class="text-body text-ink-soft mb-10 max-w-md mx-auto" style="line-height:1.65;">
+          Hablemos sobre cómo llevar tu negocio al siguiente nivel con una web de verdad.
+        </p>
+        <a href="contacto.html" class="btn-primary">Agendar reunión</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="bg-accent-deep text-paper py-section-v border-t border-gold/20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+
+      <!-- Brand -->
+      <div class="md:col-span-5">
+        <a href="index.html" class="text-2xl font-bold text-paper tracking-tight block mb-5" style="letter-spacing:-0.02em;">MGStudio</a>
+        <p class="text-body text-paper/75 max-w-xs" style="line-height:1.65;">
+          Ayudamos a marcas y negocios a construir una presencia digital honesta y efectiva. Desde Rosario para el mundo.
+        </p>
+      </div>
+
+      <!-- Nav links -->
+      <div class="md:col-span-3 md:col-start-7 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Explorar</h4>
+        <a href="servicios.html" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Servicios</a>
+        <a href="casos.html"     class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Casos</a>
+        <a href="contacto.html"  class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Contacto</a>
+      </div>
+
+      <!-- Social / Contact -->
+      <div class="md:col-span-2 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Contacto</h4>
+        <a href="mailto:hola@mgstudio.com.ar" class="text-body text-paper/75 hover:text-paper transition-colors duration-200 underline decoration-gold/40">hola@mgstudio.com.ar</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Instagram</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">LinkedIn</a>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="md:col-span-12 pt-8 mt-4 border-t border-paper/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-label text-paper/50">© 2025 MGStudio. Hecho con oficio desde Rosario para el mundo.</p>
+        <div class="flex gap-6">
+          <a href="cookies.html" class="text-label text-paper/50 hover:text-paper/80 transition-colors duration-200">Política de cookies</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       COOKIE BANNER
+       ================================================================ -->
+  <div id="cookie-banner" role="dialog" aria-label="Preferencias de cookies">
+    <p>
+      Usamos cookies para mejorar tu experiencia en el sitio.
+      <a href="cookies.html">Más info</a>
+    </p>
+    <button id="cookie-accept">Aceptar</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

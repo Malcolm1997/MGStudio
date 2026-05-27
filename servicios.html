@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — MGStudio</title>
+  <meta name="description" content="Sitios web estáticos, landing pages, e-commerce boutique y rediseño. Cada servicio pensado para que tu negocio crezca de verdad." />
+  <meta property="og:title" content="Servicios — MGStudio" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#F5F1E8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#F5F1E8',
+            'paper-2': '#ECE6D5',
+            'ink': '#1A1A1A',
+            'ink-soft': '#3D3A33',
+            'ink-muted': '#8A8270',
+            'accent': '#2E6347',
+            'accent-deep': '#1F4A33',
+            'gold': '#B89968',
+            'line': '#DCD2C0',
+            'on-surface-variant': '#404943',
+          },
+          spacing: {
+            'margin-desktop': '80px',
+            'margin-mobile': '20px',
+            'section-v': '96px',
+            'gutter': '24px',
+          },
+          borderRadius: {
+            'DEFAULT': '0.5rem',
+            'lg': '0.75rem',
+            'xl': '1rem',
+            'full': '9999px',
+          },
+          fontSize: {
+            'label': ['12px', { lineHeight: '1', letterSpacing: '0.12em', fontWeight: '600' }],
+            'h3': ['22px', { lineHeight: '1.4', letterSpacing: '-0.01em', fontWeight: '600' }],
+            'body': ['16px', { lineHeight: '1.6', letterSpacing: '0', fontWeight: '400' }],
+            'hero': ['72px', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '700' }],
+            'hero-sm': ['44px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec': ['56px', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'sec-sm': ['36px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'h2': ['36px', { lineHeight: '1.3', letterSpacing: '-0.015em', fontWeight: '700' }],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-paper text-ink font-sans">
+
+  <!-- ================================================================
+       NAVEGACIÓN
+       ================================================================ -->
+  <nav class="site-nav fixed top-0 w-full z-50 bg-paper/90 backdrop-blur-md border-b border-line" aria-label="Navegación principal">
+    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <a href="index.html" class="text-accent-deep font-bold text-2xl tracking-tight" style="letter-spacing:-0.02em;">MGStudio</a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"     class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Inicio</a>
+        <a href="servicios.html" class="nav-link active text-body text-accent-deep">Servicios</a>
+        <a href="casos.html"     class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Casos</a>
+        <a href="contacto.html"  class="nav-link text-body text-on-surface-variant hover:text-accent-deep transition-colors duration-200">Contacto</a>
+      </div>
+
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary">Empecemos</a>
+
+      <button class="hamburger md:hidden" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="casos.html">Casos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html" class="mobile-cta">Empecemos</a>
+  </div>
+
+  <main>
+
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+    <header class="pt-40 pb-20 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <div class="max-w-3xl">
+        <span class="pill-tag mb-6 inline-block reveal">Servicios</span>
+        <h1 class="text-hero-sm md:text-hero mb-8 reveal reveal-delay-1">
+          Lo que hacemos,<br/>
+          lo hacemos con <em class="fraunces-italic text-accent-deep not-italic">oficio</em>.
+        </h1>
+        <p class="text-body text-ink-soft text-lg max-w-xl reveal reveal-delay-2" style="line-height:1.7;">
+          Cada proyecto es una oportunidad de hacer algo que valga la pena.
+          Elegí el servicio que se adapta a tu negocio.
+        </p>
+      </div>
+    </header>
+
+    <hr class="editorial-rule mx-margin-mobile md:mx-margin-desktop reveal" />
+
+    <!-- ================================================================
+         SERVICIOS
+         ================================================================ -->
+    <section class="py-section-v px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto space-y-24">
+
+      <!-- Servicio 1: Sitio web estático -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <span class="pill-tag mb-6 inline-block">Presencia</span>
+          <h2 class="text-sec-sm md:text-h2 mb-5" style="font-size:clamp(28px,3vw,40px);">Sitio web estático</h2>
+          <p class="text-body text-ink-soft mb-8" style="line-height:1.7;">
+            La base de tu presencia online. Un sitio a medida, rápido y pensado para generar confianza desde el primer click. Nada de templates genéricos: cada línea de código responde a tu negocio.
+          </p>
+          <ul class="space-y-3 mb-10">
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Diseño editorial único y exclusivo
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Optimizado para SEO desde la estructura
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Mobile-first, Lighthouse 95+
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              CMS opcional para que puedas editar el contenido vos mismo
+            </li>
+          </ul>
+          <a href="contacto.html" class="btn-ghost">Consultá por este servicio <span class="arrow">→</span></a>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="rounded-xl overflow-hidden bg-paper-2 border border-line" style="aspect-ratio:4/3;">
+            <img
+              src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80"
+              alt="Diseño de sitio web estático en pantalla de laptop"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              width="800" height="600"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr class="editorial-rule reveal" />
+
+      <!-- Servicio 2: Landing page -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1 reveal reveal-delay-1">
+          <div class="rounded-xl overflow-hidden bg-paper-2 border border-line" style="aspect-ratio:4/3;">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+              alt="Landing page de conversión con analytics en pantalla"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              width="800" height="600"
+            />
+          </div>
+        </div>
+        <div class="order-1 md:order-2 reveal">
+          <span class="pill-tag mb-6 inline-block">Performance</span>
+          <h2 class="mb-5" style="font-size:clamp(28px,3vw,40px);font-weight:700;line-height:1.2;letter-spacing:-0.02em;">Landing page de conversión</h2>
+          <p class="text-body text-ink-soft mb-8" style="line-height:1.7;">
+            Una sola página, un solo objetivo: transformar visitantes en clientes. Diseñada con estructura de conversión probada para campañas, lanzamientos y captación de leads.
+          </p>
+          <ul class="space-y-3 mb-10">
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Estructura de conversión basada en datos
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Integración con email marketing y CRM
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Velocidad extrema — sub 1s de carga
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Entrega en 2 semanas
+            </li>
+          </ul>
+          <a href="contacto.html" class="btn-ghost">Consultá por este servicio <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <hr class="editorial-rule reveal" />
+
+      <!-- Servicio 3: E-commerce -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <span class="pill-tag mb-6 inline-block">Venta</span>
+          <h2 class="mb-5" style="font-size:clamp(28px,3vw,40px);font-weight:700;line-height:1.2;letter-spacing:-0.02em;">E-commerce boutique</h2>
+          <p class="text-body text-ink-soft mb-8" style="line-height:1.7;">
+            Tu catálogo online con el diseño de una revista de moda y la velocidad de un banco digital. Para marcas que no quieren parecer un negocio genérico entre millones.
+          </p>
+          <ul class="space-y-3 mb-10">
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Carrito nativo o integración con Shopify
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Checkout optimizado para reducir abandono
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              SEO de producto y categorías incluido
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Panel de gestión amigable sin código
+            </li>
+          </ul>
+          <a href="contacto.html" class="btn-ghost">Consultá por este servicio <span class="arrow">→</span></a>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="rounded-xl overflow-hidden bg-paper-2 border border-line" style="aspect-ratio:4/3;">
+            <img
+              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
+              alt="E-commerce con diseño boutique en pantalla de computadora"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              width="800" height="600"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr class="editorial-rule reveal" />
+
+      <!-- Servicio 4: Rediseño -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1 reveal reveal-delay-1">
+          <div class="rounded-xl overflow-hidden bg-paper-2 border border-line" style="aspect-ratio:4/3;">
+            <img
+              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80"
+              alt="Rediseño y optimización de sitio web — comparativa antes y después"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              width="800" height="600"
+            />
+          </div>
+        </div>
+        <div class="order-1 md:order-2 reveal">
+          <span class="pill-tag mb-6 inline-block">Mejora</span>
+          <h2 class="mb-5" style="font-size:clamp(28px,3vw,40px);font-weight:700;line-height:1.2;letter-spacing:-0.02em;">Rediseño y optimización</h2>
+          <p class="text-body text-ink-soft mb-8" style="line-height:1.7;">
+            Tenés un sitio que no te representa o que tarda demasiado en cargar. Le damos una segunda vida: mejor diseño, más velocidad y más conversiones sin perder el posicionamiento que ya ganaste.
+          </p>
+          <ul class="space-y-3 mb-10">
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Auditoría técnica y de diseño inicial
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Lighthouse 95+ garantizado
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Código limpio y moderno (sin deuda técnica)
+            </li>
+            <li class="flex items-start gap-3 text-body text-ink-soft">
+              <span class="text-gold mt-0.5 flex-shrink-0">→</span>
+              Migración sin caída de posicionamiento SEO
+            </li>
+          </ul>
+          <a href="contacto.html" class="btn-ghost">Consultá por este servicio <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================
+         FAQ
+         ================================================================ -->
+    <section class="bg-paper-2 px-margin-mobile md:px-margin-desktop py-section-v">
+      <div class="max-w-[800px] mx-auto">
+
+        <div class="mb-14 reveal">
+          <span class="pill-tag mb-4 inline-block">Preguntas frecuentes</span>
+          <h2 class="text-sec-sm">Las dudas de siempre,<br/><em class="fraunces-italic text-accent-deep not-italic">sin rodeos</em>.</h2>
+        </div>
+
+        <div class="space-y-0 divide-y divide-line reveal reveal-delay-1">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item py-6">
+            <button class="faq-btn w-full flex justify-between items-center gap-4 text-left" aria-expanded="false">
+              <span class="text-h3 text-ink" style="font-size:18px;">¿Cuánto tiempo lleva un proyecto?</span>
+              <span class="faq-icon text-gold text-2xl font-light leading-none select-none">+</span>
+            </button>
+            <div class="faq-answer">
+              <p class="text-body text-ink-soft pt-4 pb-2" style="line-height:1.7;">
+                Depende del alcance. Una landing page puede estar lista en 2 semanas. Un sitio multi-página con diseño custom tarda entre 4 y 7 semanas. Siempre acordamos un timeline antes de arrancar y lo respetamos.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item py-6">
+            <button class="faq-btn w-full flex justify-between items-center gap-4 text-left" aria-expanded="false">
+              <span class="text-h3 text-ink" style="font-size:18px;">¿Qué necesito para empezar?</span>
+              <span class="faq-icon text-gold text-2xl font-light leading-none select-none">+</span>
+            </button>
+            <div class="faq-answer">
+              <p class="text-body text-ink-soft pt-4 pb-2" style="line-height:1.7;">
+                Básicamente: saber qué querés comunicar y tener información básica de tu negocio (textos, logo si tenés, fotos si tenés). Nosotros nos encargamos de lo demás — diseño, estructura, código y estrategia.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item py-6">
+            <button class="faq-btn w-full flex justify-between items-center gap-4 text-left" aria-expanded="false">
+              <span class="text-h3 text-ink" style="font-size:18px;">¿Puedo actualizar el contenido yo mismo?</span>
+              <span class="faq-icon text-gold text-2xl font-light leading-none select-none">+</span>
+            </button>
+            <div class="faq-answer">
+              <p class="text-body text-ink-soft pt-4 pb-2" style="line-height:1.7;">
+                Sí. Si lo necesitás, integramos un CMS amigable (como Decap CMS o similar) para que puedas editar textos, imágenes y publicar novedades sin tocar una sola línea de código.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item py-6">
+            <button class="faq-btn w-full flex justify-between items-center gap-4 text-left" aria-expanded="false">
+              <span class="text-h3 text-ink" style="font-size:18px;">¿El precio incluye dominio y hosting?</span>
+              <span class="faq-icon text-gold text-2xl font-light leading-none select-none">+</span>
+            </button>
+            <div class="faq-answer">
+              <p class="text-body text-ink-soft pt-4 pb-2" style="line-height:1.7;">
+                No los incluimos por defecto, pero te asesoramos sobre las mejores opciones. El hosting para sitios estáticos puede ser gratuito (Netlify, Vercel, Cloudflare Pages) y el dominio ronda los USD 15 anuales.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item py-6">
+            <button class="faq-btn w-full flex justify-between items-center gap-4 text-left" aria-expanded="false">
+              <span class="text-h3 text-ink" style="font-size:18px;">¿Ofrecen mantenimiento posterior?</span>
+              <span class="faq-icon text-gold text-2xl font-light leading-none select-none">+</span>
+            </button>
+            <div class="faq-answer">
+              <p class="text-body text-ink-soft pt-4 pb-2" style="line-height:1.7;">
+                Sí. Tenemos planes de mantenimiento mensual que incluyen actualizaciones de contenido, revisiones de seguridad y mejoras de performance. También podés contratarnos para soporte puntual cuando lo necesites.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CTA
+         ================================================================ -->
+    <section class="px-margin-mobile md:px-margin-desktop py-section-v text-center max-w-[1200px] mx-auto reveal">
+      <h2 class="text-sec-sm md:text-sec mb-6">¿Empezamos?</h2>
+      <p class="text-body text-ink-soft mb-10 max-w-md mx-auto" style="line-height:1.65;">
+        Contanos de tu proyecto en un mensaje y coordinamos una llamada de 20 minutos sin compromiso.
+      </p>
+      <a href="contacto.html" class="btn-primary">Hablemos</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-accent-deep text-paper py-section-v border-t border-gold/20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+      <div class="md:col-span-5">
+        <a href="index.html" class="text-2xl font-bold text-paper tracking-tight block mb-5" style="letter-spacing:-0.02em;">MGStudio</a>
+        <p class="text-body text-paper/75 max-w-xs" style="line-height:1.65;">
+          Ayudamos a marcas y negocios a construir una presencia digital honesta y efectiva. Desde Rosario para el mundo.
+        </p>
+      </div>
+      <div class="md:col-span-3 md:col-start-7 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Explorar</h4>
+        <a href="servicios.html" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Servicios</a>
+        <a href="casos.html"     class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Casos</a>
+        <a href="contacto.html"  class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Contacto</a>
+      </div>
+      <div class="md:col-span-2 flex flex-col gap-3">
+        <h4 class="text-label text-gold uppercase tracking-widest mb-1">Contacto</h4>
+        <a href="mailto:hola@mgstudio.com.ar" class="text-body text-paper/75 hover:text-paper transition-colors duration-200 underline decoration-gold/40">hola@mgstudio.com.ar</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">Instagram</a>
+        <a href="https://linkedin.com"  target="_blank" rel="noopener" class="text-body text-paper/75 hover:text-paper transition-colors duration-200">LinkedIn</a>
+      </div>
+      <div class="md:col-span-12 pt-8 mt-4 border-t border-paper/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-label text-paper/50">© 2025 MGStudio. Hecho con oficio desde Rosario para el mundo.</p>
+        <a href="cookies.html" class="text-label text-paper/50 hover:text-paper/80 transition-colors duration-200">Política de cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" role="dialog" aria-label="Preferencias de cookies">
+    <p>Usamos cookies para mejorar tu experiencia. <a href="cookies.html">Más info</a></p>
+    <button id="cookie-accept">Aceptar</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
