@@ -1,25 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="MGStudios">
   <title>MGStudios</title>
-  <rect width="200" height="200" rx="18" ry="18" fill="#1F4A33"/>
+  <rect width="200" height="200" rx="36" ry="36" fill="#F0EDE4"/>
   <text
-    x="100"
-    y="122"
+    x="74"
+    y="132"
     font-family="Georgia, 'Times New Roman', serif"
-    font-style="italic"
     font-weight="700"
-    font-size="92"
-    fill="#F5F1E8"
+    font-size="122"
+    fill="#1A1A18"
     text-anchor="middle"
-    dominant-baseline="auto"
-  >MG</text>
+  >M</text>
   <text
-    x="100"
-    y="163"
-    font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
-    font-weight="400"
-    font-size="25"
-    fill="#B89968"
+    x="130"
+    y="168"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700"
+    font-size="122"
+    fill="#1F4A33"
     text-anchor="middle"
-    letter-spacing="2"
-  >Studios</text>
+  >G</text>
 </svg>
