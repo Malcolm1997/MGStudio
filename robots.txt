@@ -1,4 +1,4 @@
-# MGStudio — robots.txt
+# MGStudios — robots.txt
 # https://mgstudio.com.ar
 
 User-agent: *
