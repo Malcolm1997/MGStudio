@@ -8,7 +8,23 @@
   <meta property="og:title" content="MGStudio — Desarrollo web boutique" />
   <meta property="og:description" content="Hacemos webs que venden mientras dormís. Desarrollo boutique para negocios que buscan calidad, no plantillas." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mgstudio.com.ar/" />
+  <meta property="og:image" content="https://mgstudio.com.ar/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MGStudio — Desarrollo web boutique desde Rosario" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="MGStudio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MGStudio — Desarrollo web boutique" />
+  <meta name="twitter:description" content="Hacemos webs que venden mientras dormís. Desarrollo boutique para negocios que buscan calidad, no plantillas." />
+  <meta name="twitter:image" content="https://mgstudio.com.ar/og-image.jpg" />
   <meta name="theme-color" content="#F5F1E8" />
+  <link rel="canonical" href="https://mgstudio.com.ar/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,6 +78,62 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Datos estructurados — LocalBusiness + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://mgstudio.com.ar/#business",
+        "name": "MGStudio",
+        "description": "Estudio de desarrollo web boutique. Hacemos sitios estáticos de alta calidad para negocios reales. Diseño editorial, código limpio, entrega rápida.",
+        "url": "https://mgstudio.com.ar",
+        "email": "hola@mgstudio.com.ar",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rosario",
+          "addressRegion": "Santa Fe",
+          "addressCountry": "AR"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Argentina" },
+          { "@type": "Country", "name": "Worldwide" }
+        ],
+        "priceRange": "$$",
+        "knowsAbout": ["Desarrollo web", "SEO", "E-commerce", "Landing pages", "Diseño editorial"],
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sitio web estático a medida" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing page de conversión" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce boutique" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rediseño y optimización web" } }
+        ],
+        "sameAs": [
+          "https://instagram.com/mgstudio",
+          "https://linkedin.com/company/mgstudio"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mgstudio.com.ar/#website",
+        "url": "https://mgstudio.com.ar",
+        "name": "MGStudio",
+        "inLanguage": "es-AR",
+        "publisher": { "@id": "https://mgstudio.com.ar/#business" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://mgstudio.com.ar/#webpage",
+        "url": "https://mgstudio.com.ar/",
+        "name": "MGStudio — Desarrollo web boutique desde Rosario",
+        "isPartOf": { "@id": "https://mgstudio.com.ar/#website" },
+        "about": { "@id": "https://mgstudio.com.ar/#business" },
+        "inLanguage": "es-AR"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-paper text-ink font-sans">

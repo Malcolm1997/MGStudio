@@ -1,0 +1,74 @@
+# MGStudio — Configuración Netlify
+# Seguridad, caché y redirects
+
+[build]
+  publish = "."
+
+# ----------------------------------------------------------------
+# Headers de seguridad (aplicados a todas las páginas)
+# ----------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options            = "DENY"
+    X-Content-Type-Options     = "nosniff"
+    X-XSS-Protection           = "1; mode=block"
+    Referrer-Policy            = "strict-origin-when-cross-origin"
+    Permissions-Policy         = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security  = "max-age=31536000; includeSubDomains; preload"
+
+# HTML: sin caché (siempre fresco)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# CSS y JS: caché larga (hash en nombre si se versiona)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Imágenes y fuentes locales
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ----------------------------------------------------------------
+# Redirects
+# ----------------------------------------------------------------
+
+# www → sin www (HTTPS canónica)
+[[redirects]]
+  from   = "https://www.mgstudio.com.ar/*"
+  to     = "https://mgstudio.com.ar/:splat"
+  status = 301
+  force  = true
+
+# HTTP → HTTPS (Netlify lo hace automático, pero lo dejamos explícito)
+[[redirects]]
+  from   = "http://mgstudio.com.ar/*"
+  to     = "https://mgstudio.com.ar/:splat"
+  status = 301
+  force  = true
