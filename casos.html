@@ -99,136 +99,76 @@
     <!-- HERO -->
     <header class="pt-40 pb-16 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
       <div class="max-w-3xl">
-        <span class="pill-tag mb-6 inline-block reveal">Nuestro portfolio</span>
+        <span class="pill-tag mb-6 inline-block reveal">Portfolio</span>
         <h1 class="text-hero-sm md:text-hero mb-8 reveal reveal-delay-1">
-          Nuestros trabajos más<br/>
-          <em class="fraunces-italic text-accent-deep not-italic">recientes</em>.
+          El portfolio<br/>
+          <em class="fraunces-italic text-accent-deep not-italic">está en camino</em>.
         </h1>
         <p class="text-body text-ink-soft text-lg max-w-xl reveal reveal-delay-2" style="line-height:1.7;">
-          Creación de identidades digitales y plataformas de alta costura para marcas que valoran el detalle y la excelencia.
+          Somos un estudio nuevo y cada proyecto que tomamos recibe toda nuestra atención.
+          Acá vas a ver el resultado cuando esté listo.
         </p>
       </div>
     </header>
 
-    <!-- FILTROS -->
-    <div class="px-margin-mobile md:px-margin-desktop pb-12 max-w-[1200px] mx-auto reveal">
-      <div class="flex flex-wrap gap-3 border-b border-line pb-6">
-        <button class="filter-btn active text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="all">
-          Todos
-        </button>
-        <button class="filter-btn text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="ecommerce">
-          E-Commerce
-        </button>
-        <button class="filter-btn text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="brand">
-          Brand Site
-        </button>
-        <button class="filter-btn text-body text-ink-soft border-b-2 border-transparent pb-1 hover:text-accent-deep transition-colors" data-filter="landing">
-          Landing
-        </button>
-      </div>
-    </div>
-
-    <!-- GRID DE PROYECTOS + COMING SOON -->
+    <!-- ESTADO PRINCIPAL: SIN PROYECTOS -->
     <section class="pb-section-v px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
 
-      <!-- Proyectos existentes -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-        <!-- Proyecto 1 -->
-        <article class="project-card group reveal reveal-delay-1" data-category="ecommerce">
-          <div class="overflow-hidden rounded-lg mb-7 bg-paper-2" style="aspect-ratio:4/5;">
-            <img
-              src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
-              alt="E-commerce para Vivero Boutique El Pinar — Rosario"
-              class="project-image w-full h-full object-cover"
-              loading="lazy"
-              width="800" height="1000"
-            />
+        <!-- Panel principal -->
+        <div class="bg-paper-2 rounded-xl border border-line p-10 md:p-14 reveal">
+          <div class="w-14 h-14 bg-accent-deep/10 rounded-xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-accent-deep" style="font-size:28px;">photo_library</span>
           </div>
-          <div class="flex items-center gap-4 mb-4">
-            <span class="text-label text-gold uppercase tracking-widest">E-Commerce</span>
-            <div class="h-[1px] flex-1 bg-line"></div>
-          </div>
-          <h2 class="mb-3 group-hover:text-accent-deep transition-colors duration-250" style="font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-0.01em;">
-            Vivero Boutique "El Pinar"
-          </h2>
-          <p class="text-body text-ink-muted max-w-sm mb-5">Reinvención total de su canal de ventas online, logrando un aumento del 40% en pedidos mensuales.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="pill-tag">Diseño</span>
-            <span class="pill-tag">E-commerce</span>
-            <span class="pill-tag">SEO</span>
-          </div>
-        </article>
-
-        <!-- Proyecto 2 — offset visual en desktop -->
-        <article class="project-card group md:mt-20 reveal reveal-delay-2" data-category="brand">
-          <div class="overflow-hidden rounded-lg mb-7 bg-paper-2" style="aspect-ratio:4/5;">
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
-              alt="Brand site para Estudio de Arquitectura Silva"
-              class="project-image w-full h-full object-cover"
-              loading="lazy"
-              width="800" height="1000"
-            />
-          </div>
-          <div class="flex items-center gap-4 mb-4">
-            <span class="text-label text-gold uppercase tracking-widest">Brand Site</span>
-            <div class="h-[1px] flex-1 bg-line"></div>
-          </div>
-          <h2 class="mb-3 group-hover:text-accent-deep transition-colors duration-250" style="font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-0.01em;">
-            Estudio Arq. Silva
-          </h2>
-          <p class="text-body text-ink-muted max-w-sm mb-5">Un portfolio digital que se siente como una revista de arquitectura de colección. Minimalismo puro.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="pill-tag">Diseño editorial</span>
-            <span class="pill-tag">Portfolio</span>
-          </div>
-        </article>
-
-        <!-- Proyecto 3 -->
-        <article class="project-card group reveal reveal-delay-1" data-category="landing">
-          <div class="overflow-hidden rounded-lg mb-7 bg-paper-2" style="aspect-ratio:4/5;">
-            <img
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
-              alt="Landing page para consultoría de RRHH — Laura Morales"
-              class="project-image w-full h-full object-cover"
-              loading="lazy"
-              width="800" height="1000"
-            />
-          </div>
-          <div class="flex items-center gap-4 mb-4">
-            <span class="text-label text-gold uppercase tracking-widest">Landing</span>
-            <div class="h-[1px] flex-1 bg-line"></div>
-          </div>
-          <h2 class="mb-3 group-hover:text-accent-deep transition-colors duration-250" style="font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-0.01em;">
-            Consultoría LM
-          </h2>
-          <p class="text-body text-ink-muted max-w-sm mb-5">Landing de captación para una consultora de RRHH que duplicó sus leads en el primer mes de lanzamiento.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="pill-tag">Landing</span>
-            <span class="pill-tag">Conversión</span>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Coming soon card -->
-      <div class="flex flex-col items-center text-center py-20 bg-paper-2 rounded-xl border border-line reveal">
-        <div class="max-w-lg px-6">
-          <div class="w-14 h-14 bg-accent-deep/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-            <span class="material-symbols-outlined text-accent-deep" style="font-size:28px;">construction</span>
-          </div>
-          <h3 class="text-h3 mb-4">Más casos en camino</h3>
+          <h2 class="text-h2 mb-5" style="font-size:clamp(22px,3vw,32px);">Primeros proyectos en producción</h2>
           <p class="text-body text-ink-muted mb-8" style="line-height:1.7;">
-            Estamos documentando cuidadosamente nuestros lanzamientos más recientes para compartirlos con el mundo.
-            Nuestra pasión por el detalle lleva tiempo.
+            Estamos trabajando en nuestros primeros lanzamientos y los documentamos con el mismo cuidado que ponemos en el código.
+            Cuando estén listos, los encontrás acá.
           </p>
-          <div class="bg-paper rounded-lg border border-line p-6">
-            <p class="text-body text-accent-deep font-semibold mb-1">¡Estamos tomando nuevos proyectos!</p>
-            <p class="text-body text-ink-muted mb-6">Trabajamos con marcas <strong class="text-ink">locales y globales</strong>.</p>
-            <a href="contacto.html" class="btn-primary">Hablemos de tu proyecto</a>
+          <div class="border-t border-line pt-8 space-y-3">
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              Sitios web estáticos de alta performance
+            </div>
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              Landing pages orientadas a conversión
+            </div>
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              E-commerce boutique con diseño editorial
+            </div>
+            <div class="flex items-center gap-3 text-body text-ink-soft">
+              <span class="text-gold flex-shrink-0">→</span>
+              Brand sites para profesionales y estudios
+            </div>
           </div>
         </div>
+
+        <!-- Panel CTA -->
+        <div class="space-y-6 reveal reveal-delay-1">
+          <div class="bg-accent-deep text-paper rounded-xl p-10 md:p-12">
+            <span class="text-label text-gold uppercase tracking-widest block mb-5">Apertura de agenda</span>
+            <h3 class="mb-5" style="font-size:clamp(20px,2.5vw,28px);font-weight:700;line-height:1.25;letter-spacing:-0.01em;">
+              Tu proyecto puede ser el primero en este portfolio.
+            </h3>
+            <p class="text-body text-paper/70 mb-8" style="line-height:1.65;">
+              Los primeros clientes tienen precio especial y atención directa. Sin intermediarios, sin listas de espera.
+            </p>
+            <a href="contacto.html" class="inline-flex items-center gap-2 bg-paper text-accent-deep font-bold text-label tracking-widest uppercase px-8 py-4 rounded-full hover:bg-paper/90 transition-colors duration-200">
+              Hablemos <span style="color:#B89968;">→</span>
+            </a>
+          </div>
+
+          <div class="bg-paper-2 rounded-xl border border-line p-8">
+            <p class="text-body text-ink-muted italic" style="line-height:1.7;">
+              "No mostramos proyectos inventados. Cuando tengamos casos reales para mostrar, los vas a ver acá — con contexto, resultados y honestidad."
+            </p>
+            <p class="text-label text-ink-muted uppercase tracking-widest mt-4">— MGStudio</p>
+          </div>
+        </div>
+
       </div>
 
     </section>
@@ -269,23 +209,5 @@
   </div>
 
   <script src="js/main.js" defer></script>
-
-  <script>
-    // Inicializar filtros con estilo de underline activo
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => {
-          b.classList.remove('active', 'text-accent-deep', 'font-bold', 'border-accent-deep');
-          b.classList.add('text-ink-soft');
-        });
-        btn.classList.add('active', 'text-accent-deep', 'font-bold', 'border-accent-deep');
-        btn.classList.remove('text-ink-soft');
-      });
-    });
-
-    // Estado inicial del filtro activo
-    document.querySelector('.filter-btn.active')?.classList.add('text-accent-deep', 'font-bold', 'border-accent-deep');
-    document.querySelector('.filter-btn.active')?.classList.remove('text-ink-soft');
-  </script>
 </body>
 </html>
